@@ -16,7 +16,7 @@
     --popover: 255 255 255;
     --popover-foreground: 15 23 42;
 
-    --primary: 99 102 241;
+    --primary: 71 85 105;
     --primary-foreground: 248 250 252;
 
     --secondary: 241 245 249;
@@ -25,24 +25,27 @@
     --muted: 241 245 249;
     --muted-foreground: 100 116 139;
 
-    --accent: 236 254 255;
+    --accent: 203 213 225;
     --accent-foreground: 15 23 42;
 
-    --destructive: 239 68 68;
+    --destructive: 220 38 38;
     --destructive-foreground: 248 250 252;
 
     --border: 226 232 240;
     --input: 226 232 240;
-    --ring: 99 102 241;
+    --ring: 71 85 105;
 
     --radius: 0.75rem;
 
-    --therapeutic-blue: 59 130 246;
-    --therapeutic-green: 34 197 94;
-    --therapeutic-purple: 147 51 234;
-    --therapeutic-pink: 236 72 153;
-    --therapeutic-orange: 251 146 60;
-    --warm-bg: 254 252 232;
+    /* Nueva paleta inspirada en la imagen */
+    --dark-navy: 30 41 59;
+    --medium-navy: 51 65 85;
+    --light-navy: 71 85 105;
+    --slate-blue: 100 116 139;
+    --cool-gray: 148 163 184;
+    --light-blue: 186 230 253;
+    --accent-teal: 94 234 212;
+    --warm-bg: 248 250 252;
   }
 
   .dark {
@@ -55,8 +58,8 @@
     --popover: 30 41 59;
     --popover-foreground: 248 250 252;
 
-    --primary: 99 102 241;
-    --primary-foreground: 15 23 42;
+    --primary: 71 85 105;
+    --primary-foreground: 248 250 252;
 
     --secondary: 51 65 85;
     --secondary-foreground: 248 250 252;
@@ -67,12 +70,12 @@
     --accent: 51 65 85;
     --accent-foreground: 248 250 252;
 
-    --destructive: 239 68 68;
+    --destructive: 220 38 38;
     --destructive-foreground: 248 250 252;
 
     --border: 51 65 85;
     --input: 51 65 85;
-    --ring: 99 102 241;
+    --ring: 71 85 105;
   }
 }
 
@@ -88,15 +91,23 @@
 }
 
 @layer utilities {
-  .therapeutic-gradient {
-    background: linear-gradient(135deg, rgb(59 130 246) 0%, rgb(147 51 234) 100%);
+  .navy-gradient {
+    background: linear-gradient(135deg, rgb(30 41 59) 0%, rgb(51 65 85) 100%);
   }
   
-  .warm-gradient {
-    background: linear-gradient(135deg, rgb(251 146 60) 0%, rgb(236 72 153) 100%);
+  .cool-gradient {
+    background: linear-gradient(135deg, rgb(71 85 105) 0%, rgb(100 116 139) 100%);
+  }
+
+  .teal-accent-gradient {
+    background: linear-gradient(135deg, rgb(71 85 105) 0%, rgb(94 234 212) 100%);
   }
 
   .gentle-shadow {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .deep-shadow {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 }
