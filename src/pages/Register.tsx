@@ -74,89 +74,89 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 p-4">
-      <Card className="w-full max-w-md gentle-shadow">
-        <CardHeader className="text-center space-y-4">
-          <div className="mx-auto w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-            <Heart className="w-8 h-8 text-white" />
+    <div className="min-h-screen flex items-center justify-center navy-gradient p-4">
+      <Card className="w-full max-w-md deep-shadow border-0">
+        <CardHeader className="text-center space-y-6 pb-8">
+          <div className="mx-auto w-20 h-20 bg-gradient-to-br from-teal-400 to-cyan-300 rounded-full flex items-center justify-center shadow-lg">
+            <Heart className="w-10 h-10 text-slate-800" />
           </div>
-          <CardTitle className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <CardTitle className="text-3xl font-bold text-slate-800">
             Únete a MindCare
           </CardTitle>
-          <CardDescription>
+          <CardDescription className="text-slate-600 text-lg">
             Crea tu cuenta y comienza tu viaje terapéutico
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <Label htmlFor="name">Nombre completo</Label>
+              <Label htmlFor="name" className="text-slate-700 font-medium">Nombre completo</Label>
               <Input
                 id="name"
                 type="text"
                 placeholder="Tu nombre completo"
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
-                className="transition-all duration-200 focus:ring-2 focus:ring-blue-500"
+                className="transition-all duration-200 focus:ring-2 focus:ring-slate-500 border-slate-300"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email" className="text-slate-700 font-medium">Email</Label>
               <Input
                 id="email"
                 type="email"
                 placeholder="tu@email.com"
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="transition-all duration-200 focus:ring-2 focus:ring-blue-500"
+                className="transition-all duration-200 focus:ring-2 focus:ring-slate-500 border-slate-300"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="password">Contraseña</Label>
+              <Label htmlFor="password" className="text-slate-700 font-medium">Contraseña</Label>
               <Input
                 id="password"
                 type="password"
                 placeholder="Mínimo 6 caracteres"
                 value={formData.password}
                 onChange={(e) => setFormData({...formData, password: e.target.value})}
-                className="transition-all duration-200 focus:ring-2 focus:ring-blue-500"
+                className="transition-all duration-200 focus:ring-2 focus:ring-slate-500 border-slate-300"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="confirmPassword">Confirmar contraseña</Label>
+              <Label htmlFor="confirmPassword" className="text-slate-700 font-medium">Confirmar contraseña</Label>
               <Input
                 id="confirmPassword"
                 type="password"
                 placeholder="Repite tu contraseña"
                 value={formData.confirmPassword}
                 onChange={(e) => setFormData({...formData, confirmPassword: e.target.value})}
-                className="transition-all duration-200 focus:ring-2 focus:ring-blue-500"
+                className="transition-all duration-200 focus:ring-2 focus:ring-slate-500 border-slate-300"
               />
             </div>
 
             <div className="space-y-3">
-              <Label>Tipo de cuenta</Label>
+              <Label className="text-slate-700 font-medium">Tipo de cuenta</Label>
               <RadioGroup 
                 value={formData.role} 
                 onValueChange={(value) => setFormData({...formData, role: value as 'patient' | 'therapist'})}
               >
-                <div className="flex items-center space-x-3 p-3 rounded-lg border border-gray-200 hover:bg-blue-50 transition-colors">
+                <div className="flex items-center space-x-3 p-3 rounded-lg border border-slate-300 hover:bg-slate-50 transition-colors">
                   <RadioGroupItem value="patient" id="patient" />
-                  <User className="w-5 h-5 text-blue-500" />
+                  <User className="w-5 h-5 text-slate-600" />
                   <div>
-                    <Label htmlFor="patient" className="font-medium cursor-pointer">Paciente</Label>
-                    <p className="text-sm text-gray-500">Accede a herramientas terapéuticas</p>
+                    <Label htmlFor="patient" className="font-medium cursor-pointer text-slate-800">Paciente</Label>
+                    <p className="text-sm text-slate-600">Accede a herramientas terapéuticas</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3 p-3 rounded-lg border border-gray-200 hover:bg-purple-50 transition-colors">
+                <div className="flex items-center space-x-3 p-3 rounded-lg border border-slate-300 hover:bg-slate-50 transition-colors">
                   <RadioGroupItem value="therapist" id="therapist" />
-                  <Users className="w-5 h-5 text-purple-500" />
+                  <Users className="w-5 h-5 text-slate-600" />
                   <div>
-                    <Label htmlFor="therapist" className="font-medium cursor-pointer">Terapeuta</Label>
-                    <p className="text-sm text-gray-500">Gestiona pacientes y seguimiento</p>
+                    <Label htmlFor="therapist" className="font-medium cursor-pointer text-slate-800">Terapeuta</Label>
+                    <p className="text-sm text-slate-600">Gestiona pacientes y seguimiento</p>
                   </div>
                 </div>
               </RadioGroup>
@@ -164,7 +164,7 @@ const Register = () => {
 
             <Button 
               type="submit" 
-              className="w-full therapeutic-gradient text-white font-medium py-2 hover:shadow-lg transition-all duration-200"
+              className="w-full cool-gradient text-white font-medium py-3 hover:shadow-lg transition-all duration-200 border-0"
               disabled={isLoading}
             >
               {isLoading ? (
@@ -181,10 +181,10 @@ const Register = () => {
             </Button>
           </form>
           
-          <div className="mt-6 text-center">
-            <p className="text-sm text-gray-600">
+          <div className="mt-8 text-center">
+            <p className="text-sm text-slate-600">
               ¿Ya tienes cuenta?{' '}
-              <Link to="/login" className="text-blue-600 hover:text-blue-700 font-medium">
+              <Link to="/login" className="text-slate-700 hover:text-slate-900 font-medium underline">
                 Inicia sesión aquí
               </Link>
             </p>
